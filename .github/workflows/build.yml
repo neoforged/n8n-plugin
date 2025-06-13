@@ -39,9 +39,9 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ghcr.io/${{ github.repository }}
-          # custom latest tag, the rest are default values
           tags: |
             type=raw,value=latest,enable={{is_default_branch}}
+            type=raw,value=1.0.0
             type=schedule
             type=ref,event=branch
             type=ref,event=tag
