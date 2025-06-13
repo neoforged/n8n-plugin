@@ -3,5 +3,6 @@ WORKDIR /home/node
 USER root
 COPY ./ /n8n-plugin
 RUN cd /n8n-plugin && npm link
-RUN mkdir /home/node/.n8n/custom/ && cd /home/node/.n8n/custom/ && npm link neoforged-n8n-plugin
+RUN mkdir /custom-nodes && cd /custom-nodes && npm link neoforged-n8n-plugin
+ENV N8N_CUSTOM_EXTENSIONS=/custom-nodes
 USER node
