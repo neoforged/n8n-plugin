@@ -1,4 +1,4 @@
-FROM n8nio/n8n:1.98.0
+FROM n8nio/n8n:1.113.3
 WORKDIR /home/node
 USER root
 COPY ./ /n8n-plugin
